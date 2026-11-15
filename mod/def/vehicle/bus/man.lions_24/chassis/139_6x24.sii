@@ -1,0 +1,59 @@
+SiiNunit
+{
+accessory_chassis_data : 139_6x24.man.lions_24.chassis
+{
+	name: "@@chassis_6x2_4@@"
+	price: 115000
+	unlock: 8
+	info[]: "13.9 @@unit_m@@, @@chassis_6x2_4@@"
+
+	icon: "bus/share/chassis/chassis_6x24"
+	part_type: factory
+
+	model: "/vehicle/bus/man_lions_24/chassis/chs_139_6x24.pmd"
+	collision: "/vehicle/bus/man_lions_24/chassis/chs_139_6x24.pmc"
+
+	variant: default
+	look: default
+
+	extended_shadow_texture: "/vehicle/bus/man_lions_24/ui_shadow/ui_shadow_139_6x24.tobj"
+	extended_shadow_intensity: 0.95
+	extended_shadow_fadeout_start: 10
+	extended_shadow_fadeout_length: 0
+
+	ui_shadow: "/vehicle/bus/man_lions_24/ui_shadow/ui_shadow_139_6x24.pmd"
+
+	adblue_tank_size: 65.0
+
+	residual_travel[]: 0.12
+	residual_travel[]: 0.08
+	residual_travel[]: 0.08
+
+	powered_axle[]: false
+	powered_axle[]: true
+	powered_axle[]: false
+
+	suspension_class: bus
+
+	steerable_axle[]: true
+	steerable_axle[]: false
+	steerable_axle[]: true
+
+	max_steering_angle: 53
+
+	kerb_weight[0]: 5200
+	kerb_weight[1]: 6200
+	kerb_weight[2]: 4100
+
+	# 降低重心以改善过弯抗侧翻倾向，其余底盘参数保持原版。
+	cog_height: 0.95
+
+	passenger_capacity: 56
+
+	suitable_for[]: "139h6.man.lions_24.cabin"
+
+	defaults[]: "/def/vehicle/bus/man.lions_24/accessory/tank/400l.sii"
+
+@include "sound.sui" 
+}
+}

@@ -1,0 +1,61 @@
+SiiNunit
+{
+accessory_chassis_data : 137_6x24.scania.touring_23.chassis
+{
+	name: "@@chassis_6x2_4@@"
+	price: 108000
+	unlock: 8
+	part_type: factory
+
+	icon: "bus/share/chassis/chassis_6x24"
+
+	info[]: "13.7 @@unit_m@@, @@chassis_6x2_4@@"
+
+	model: "/vehicle/bus/scania_touring_23/chassis/chs_137_6x24.pmd"
+	collision: "/vehicle/bus/scania_touring_23/chassis/chs_137_6x24.pmc"
+	variant: Default
+	look: Default
+
+	extended_shadow_texture: "/vehicle/bus/scania_touring_23/ui_shadow_137_6x24.tobj"
+	extended_shadow_intensity: 0.95
+	extended_shadow_fadeout_start: 10
+	extended_shadow_fadeout_length: 0
+
+	ui_shadow: "/vehicle/bus/scania_touring_23/chassis/ui_shadow_137_6x24.pmd"
+
+	adblue_tank_size: 60.0
+
+	residual_travel[]: 0.12
+	residual_travel[]: 0.08
+	residual_travel[]: 0.08
+
+	powered_axle[]: false
+	powered_axle[]: true
+	powered_axle[]: false
+
+	suspension_class: bus
+
+	steerable_axle[]: true
+	steerable_axle[]: false
+	steerable_axle[]: true
+
+	max_steering_angle: 51
+
+	kerb_weight[0]: 5400
+	kerb_weight[1]: 6500
+	kerb_weight[2]: 4300
+
+	# 降低重心以改善过弯抗侧翻倾向，其余底盘参数保持原版。
+	cog_height: 0.90
+
+	passenger_capacity: 57
+
+	lamp_setup: "/def/vehicle/bus/scania.touring_23/lamp_setup.sii"
+
+	suitable_for[]: "137h6.scania.touring_23.cabin"
+
+	defaults[]: "/def/vehicle/bus/scania.touring_23/accessory/tank/500l.sii"
+
+@include "sound.sui"
+}
+}

@@ -1,0 +1,187 @@
+SiiNunit
+{
+bus_economy_data : bus_economy.data
+{
+
+	stops_per_route_max: 10
+
+	departures_per_city_min: 4
+	departures_per_city_max: 8
+
+	tourist_departures_per_city_min: 4
+	tourist_departures_per_city_max: 8
+
+	selection_count_max: 8
+
+	tourist_selection_count_max: 12
+
+	selection_range_max: 50
+
+	traffic_side_change: last_stop
+
+	max_ferry_time_percentage: 55
+
+	tourist_max_ferry_time_percentage: 85
+
+	route_dir_diff: 65.0
+
+	tourist_stop_distance_min_km: 20
+
+	tourist_stop_local_distance_max_km: 400
+
+	tourist_stop_global_distance_max_km: 1000
+
+ 	offer_time_factor: 1.0
+
+	offer_additional_time_stage_m: 15
+
+ 	tourist_offer_time_factor: 1.3
+
+	tourist_offer_additional_time_stage_m: 15
+
+	tourist_day_start_hour: 6
+
+	tourist_evening_start_hour: 18
+
+	tourist_night_start_hour: 0
+
+	tourist_low_prio_weight: 2
+
+	tourist_mid_prio_weight: 3
+
+	tourist_high_prio_weight: 4
+
+	satisfaction_new_passenger: (0.45, 0.8)
+
+	satisfaction_new_passenger_core_wear_limit: 0.2
+	satisfaction_new_passenger_core_wear_penalty: (0.04, 0.08)
+	satisfaction_new_passenger_core_wear_reward: (0.02, 0.04)
+
+	satisfaction_penalty_cooldown_time_s: 5
+
+	# 两档 G 力满意度惩罚设为零；保留原版触发门槛、概率和冷却。
+	satisfaction_acceleration_limits[]: (6.0, 6.0, 6.0)
+	satisfaction_acceleration_penalties[]: (0.0, 0.0)
+	satisfaction_acceleration_probabilities[]: 1.0
+
+	satisfaction_acceleration_limits[]: (1000.0, 1000.0, 11.0)
+	satisfaction_acceleration_penalties[]: (0.0, 0.0)
+	satisfaction_acceleration_probabilities[]: 1.0
+	satisfaction_accelaration_capture_time_s: 3
+
+	satisfaction_crash_limits_kph[]: 6.0
+	satisfaction_crash_penalties[]: (0.05, 0.1)
+
+	# 超速满意度惩罚设为零；保留原版 130 km/h 门槛和 5 秒触发时间。
+	satisfaction_speed_trigger_kph: 130.0
+	satisfaction_speed_trigger_time_s: 5
+	satisfaction_speed_penalty: (0.0, 0.0)
+
+	satisfaction_core_wear_limits[]: 0.01
+	satisfaction_core_wear_penalties[]: (0.10, 0.28)
+
+	satisfaction_core_wear_limits[]: 0.05
+	satisfaction_core_wear_penalties[]: (0.22, 0.46)
+
+	satisfaction_late_time_m: 15
+	satisfaction_late_penalty: (0.05, 0.13)
+
+	satisfaction_offence_penalty: (0.10, 0.20)
+
+	# 连续无扣分行驶的奖励间隔缩短至 10 km，奖励幅度保持原版。
+	satisfaction_no_penalty_reward_distance_km: 10
+	satisfaction_no_penalty_reward: (0.06, 0.12)
+
+	satisfaction_no_penalty_stage_reward: (0.06, 0.12)
+
+	satisfaction_on_time_reward: (0.06, 0.18)
+
+	failure_acceleration_limit: (-1.0, -1.0, 22.0)
+
+	reward_medal[]:		"delivery2"
+	reward_medal[]:		"delivery1"
+	reward_medal[]:		"delivery4"
+	reward_medal[]:		"delivery3"
+	reward_medal[]:		"delivery5"
+	reward_medal[]:		"delivery5"
+	reward_medal[]:		"delivery0"
+
+	reward_title[]:		"@@bus_job_reward_level_0_t@@"
+	reward_title[]:		"@@bus_job_reward_level_1_t@@"
+	reward_title[]:		"@@bus_job_reward_level_2_t@@"
+	reward_title[]:		"@@bus_job_reward_level_3_t@@"
+	reward_title[]:		"@@bus_job_reward_level_4_t@@"
+	reward_title[]:		"@@bus_job_reward_level_5_t@@"
+	reward_title[]:		"@@bus_job_reward_level_6_t@@"
+
+	reward_name[]:		"@@bus_job_reward_level_0@@"
+	reward_name[]:		"@@bus_job_reward_level_1@@"
+	reward_name[]:		"@@bus_job_reward_level_2@@"
+	reward_name[]:		"@@bus_job_reward_level_3@@"
+	reward_name[]:		"@@bus_job_reward_level_4@@"
+	reward_name[]:		"@@bus_job_reward_level_5@@"
+	reward_name[]:		"@@bus_job_reward_level_6@@"
+
+	reward_satisfaction_level[]:	0.86
+	reward_satisfaction_level[]:	0.72
+	reward_satisfaction_level[]:	0.58
+	reward_satisfaction_level[]:	0.43
+	reward_satisfaction_level[]:	0.29
+	reward_satisfaction_level[]:	0.15
+	reward_satisfaction_level[]:	0.0
+
+	reward_color[]: (1.00, 0.78, 0.05)
+	reward_color[]: (0.29, 0.51, 0.89)
+	reward_color[]: (0.57, 1.00, 0.45)
+	reward_color[]: (0.34, 0.29, 0.92)
+	reward_color[]: (1.00, 0.25, 0.20)
+	reward_color[]: (1.00, 0.25, 0.20)
+	reward_color[]: (1.00, 0.00, 0.00)
+
+	passengers[]: .passengers.common
+
+	bus_stop_cutscenes[]: bus_st_def
+
+}
+
+bus_passenger_data : .passengers.common
+{
+	low_detail_mover: 	mover.bus.pass.low
+	medium_detail_mover: 	mover.bus.pass.medium
+	high_detail_mover: 	mover.bus.pass.high
+}
+
+mover_model_group : mover.bus.pass.high
+{
+	desc_tags[]: bus
+	desc_tags[]: seat
+	desc_tags[]: high
+
+	anim_tags[]: bus
+	anim_tags[]: sitting
+
+	lod_index_range: (0, 0)
+}
+
+mover_model_group : mover.bus.pass.medium
+{
+	desc_tags[]: bus
+	desc_tags[]: seat
+
+	anim_tags[]: bus
+	anim_tags[]: sitting
+
+	lod_index_range: (0, 0)
+}
+
+mover_model_group : mover.bus.pass.low
+{
+	desc_tags[]: bus
+	desc_tags[]: seat
+
+	anim_tags[]: bus
+	anim_tags[]: sitting
+
+	lod_index_range: (1, 1)
+}
+}

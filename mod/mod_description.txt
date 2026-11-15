@@ -1,0 +1,64 @@
+Happy Passengers 0.8.0
+
+Speeding and both G-force tiers apply no passenger satisfaction penalty.
+超速和两档 G 力均不扣除乘客满意度。
+
+The penalty-free driving reward distance is reduced from 30 km to 10 km.
+连续无扣分行驶的奖励间隔从 30 km 缩短至 10 km。
+
+Each qualifying reward retains the original increase of 6–12 percentage points.
+每次符合条件的奖励仍按原版增加 6–12 个百分点。
+
+Reward eligibility, distance tracking and satisfaction limits follow the original game logic.
+奖励触发资格、里程累计及满意度上限沿用原版游戏逻辑。
+
+All five chassis variants across the three official coaches receive lower centers of gravity.
+三款官方客车的五种底盘均降低重心。
+
+MAN Lion's Coach: 1.25 to 0.95 on both chassis variants.
+MAN Lion's Coach：两种底盘均从 1.25 调整为 0.95。
+
+Scania Touring: 1.20 to 0.90 on both chassis variants.
+Scania Touring：两种底盘均从 1.20 调整为 0.90。
+
+Volvo 9700 DD: 1.40 to 1.05.
+Volvo 9700 DD：从 1.40 调整为 1.05。
+
+Lower centers of gravity aim to improve cornering stability, but do not guarantee protection from rollovers.
+降低重心旨在改善过弯稳定性，但不能保证车辆不会侧翻。
+
+Chassis weight, suspension, tires, steering, power and passenger capacity retain their original values.
+底盘重量、悬挂、轮胎、转向、动力和载客量保持原值。
+
+Original passenger and other game sounds are retained, with no custom praise messages or voices.
+保留原版乘客及其他游戏声音，不包含自定义称赞提示或语音。
+
+Collisions, wear, lateness, traffic offences and extreme-impact job-failure rules remain unchanged.
+碰撞、磨损、晚点、交通违章和严重冲击导致任务失败的规则保持原版。
+
+A speeding ticket may still cause a separate traffic-offence penalty.
+超速罚款仍可能触发独立的交通违章扣分。
+
+Other satisfaction rewards retain their original values.
+其他满意度奖励保持原值。
+
+Requires the Coaches DLC and targets ETS2 1.62.x, based on version 1.62.3.2.
+需要 Coaches DLC，面向 ETS2 1.62.x，基于 1.62.3.2 制作。
+
+On first installation or when switching from versioned filenames, disable older packages and activate happy_passengers.scs once in the current profile's Mod Manager.
+首次安装或从带版本号的文件名切换时，停用旧版安装包，并在当前存档的 MOD 管理器中手动启用一次 happy_passengers.scs。
+
+For later compatible updates, exit the game and overwrite the same happy_passengers.scs file without renaming it.
+后续更新兼容版本时，先退出游戏，再覆盖同名的 happy_passengers.scs 文件，不要重命名。
+
+Give this mod higher priority than other mods changing the same coach economy or chassis definitions.
+将本 MOD 的优先级设为高于其他修改相同客车经济或底盘配置的 MOD。
+
+Truck chassis, global physics definitions and user stability settings are not modified.
+不修改货车底盘、全局物理配置或用户稳定性设置。
+
+Static configuration and package integrity checks have passed, and the user has reported working zero penalties.
+静态配置与安装包完整性检查已通过，用户已反馈零扣分生效。
+
+The 10 km reward interval and handling improvements have not yet been verified in game.
+10 km 奖励间隔及操控改善幅度尚未游戏内验证。

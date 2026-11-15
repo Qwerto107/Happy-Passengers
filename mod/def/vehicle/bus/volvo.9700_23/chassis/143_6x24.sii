@@ -1,0 +1,60 @@
+SiiNunit
+{
+accessory_chassis_data : 143_6x24.volvo.9700_23.chassis
+{
+	name: "@@chassis_6x2_4@@"
+	price: 128000
+	unlock: 0
+	icon: "bus/share/chassis/chassis_6x24"
+
+	info[]: "14.3 @@unit_m@@, @@chassis_6x2_4@@"
+	part_type: factory
+
+	model: "/vehicle/bus/volvo_9700_23/chassis/chs_143_6x24.pmd"
+	collision: "/vehicle/bus/volvo_9700_23/chassis/chs_143_6x24.pmc"
+	variant: Default
+	look: Default
+
+	extended_shadow_texture: "/vehicle/bus/volvo_9700_23/ui_shadow_143_6x24.tobj"
+	extended_shadow_intensity: 0.95
+	extended_shadow_fadeout_start: 10
+	extended_shadow_fadeout_length: 0
+
+	ui_shadow: "/vehicle/bus/volvo_9700_23/chassis/ui_shadow_143_6x24.pmd"
+
+	adblue_tank_size: 65.0
+
+	residual_travel[]: 0.12
+	residual_travel[]: 0.08
+	residual_travel[]: 0.08
+
+	powered_axle[]: false
+	powered_axle[]: true
+	powered_axle[]: false
+
+	suspension_class: bus
+
+	steerable_axle[]: true
+	steerable_axle[]: false
+	steerable_axle[]: true
+
+	max_steering_angle: 48
+
+	kerb_weight[0]: 6300
+	kerb_weight[1]: 7600
+	kerb_weight[2]: 5100
+
+	# 降低重心以改善过弯抗侧翻倾向，其余底盘参数保持原版。
+	cog_height: 1.05
+
+	passenger_capacity: 78
+
+	lamp_setup: "/def/vehicle/bus/volvo.9700_23/lamp_setup.sii"
+
+	suitable_for[]: "143d6.volvo.9700_23.cabin"
+
+	defaults[]: "/def/vehicle/bus/volvo.9700_23/accessory/tank/2x205l.sii"
+
+@include "sound.sui"
+}
+}

@@ -1,0 +1,52 @@
+SiiNunit
+{
+accessory_chassis_data : 121_4x2.man.lions_24.chassis
+{
+	name: "@@chassis_4x2@@"
+	price: 82000
+	unlock: 0
+	info[]: "12.1 @@unit_m@@, @@chassis_4x2@@"
+
+	icon: "bus/share/chassis/chassis_4x2"
+	part_type: factory
+
+	model: "/vehicle/bus/man_lions_24/chassis/chs_121_4x2.pmd"
+	collision: "/vehicle/bus/man_lions_24/chassis/chs_121_4x2.pmc"
+
+	variant: default
+	look: default
+
+	extended_shadow_texture: "/vehicle/bus/man_lions_24/ui_shadow/ui_shadow_121_4x2.tobj"
+	extended_shadow_intensity: 0.95
+	extended_shadow_fadeout_start: 10
+	extended_shadow_fadeout_length: 0
+
+	ui_shadow: "/vehicle/bus/man_lions_24/ui_shadow/ui_shadow_121_4x2.pmd"
+
+	adblue_tank_size: 60.0
+
+	residual_travel[]: 0.12
+	residual_travel[]: 0.08
+
+	powered_axle[]: false
+	powered_axle[]: true
+
+	suspension_class: bus
+
+	max_steering_angle: 53
+
+	kerb_weight[0]: 4420
+	kerb_weight[1]: 8900
+
+	# 降低重心以改善过弯抗侧翻倾向，其余底盘参数保持原版。
+	cog_height: 0.95
+
+	passenger_capacity: 48
+
+	suitable_for[]: "121h4.man.lions_24.cabin"
+
+	defaults[]: "/def/vehicle/bus/man.lions_24/accessory/tank/400l.sii"
+
+@include "sound.sui"
+}
+}

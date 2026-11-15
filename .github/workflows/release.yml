@@ -1,0 +1,60 @@
+name: Publish Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  release:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    env:
+      RELEASE_TAG: ${{ github.ref_name }}
+    steps:
+      - name: Check out tagged source
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.13'
+
+      - name: Validate tag and build packages
+        run: python tools/build.py --tag "$RELEASE_TAG"
+
+      - name: Archive Workshop content
+        run: |
+          python - <<'PY'
+          import os
+          from pathlib import Path
+          import shutil
+
+          version = os.environ["RELEASE_TAG"][1:]
+          workshop = Path("dist") / f"workshop_{version}"
+          shutil.make_archive(str(workshop), "zip", root_dir=workshop)
+          PY
+
+      - name: Publish GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          version="${RELEASE_TAG#v}"
+          gh release create "$RELEASE_TAG" \
+            "dist/happy_passengers.scs" \
+            "dist/workshop_${version}.zip" \
+            --verify-tag \
+            --title "Happy Passengers $RELEASE_TAG" \
+            --notes-file mod/mod_description.txt

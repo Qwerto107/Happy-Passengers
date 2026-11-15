@@ -1,0 +1,14 @@
+SiiNunit
+{
+mod_package : .happy.quiet
+{
+    package_version: "0.8.0"
+    display_name: "Happy Passengers"
+    author: "HappyPassengers"
+    category[]: "other"
+    icon: "mod_icon.jpg"
+    description_file: "mod_description.txt"
+    compatible_versions[]: "1.62.*"
+    dlc_dependencies[]: "dlc_bus"
+}
+}
